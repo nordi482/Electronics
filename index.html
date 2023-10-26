@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/material-icons@1.13.8/iconfont/material-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fahkwang&family=Inter:wght@600&family=Jost:ital,wght@0,500;1,200&family=Merriweather&family=Nunito+Sans:opsz@6..12&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Sriracha&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(8,105,218);
+        color: white;
+    }
+
+    .ship-order, a {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        gap: 2vw;
+        font-size: small;
+        font-weight: 100;
+        font-family: 'Inter', sans-serif;
+        margin-right: 3vw;
+    }
+
+    .cust-service {
+        font-size: small;
+        font-weight: lighter;
+        font-family: 'Inter', sans-serif;
+        margin-left: 6vw;
+    }
+
+
+    .mainnav {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(8,114,240);
+        align-items: center;
+    }
+
+    .logo {
+        margin-left: 5vw;
+        padding: 2.5vh;
+    }
+
+    input[type=search] {
+        color: #666;
+        padding: 2vh;
+        height: auto;
+        border-width: 1px;
+        border-style: solid;
+        border: 1px solid rgb(204, 204, 204);
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    input[type=search]::placeholder {
+        font-family: 'Inter', sans-serif;
+        margin-left: 1vw;
+    }
+
+    .nav-btn {
+        padding: 1.2vw;
+        background-color: rgb(39,51,63);
+        border: 1px solid transparent;
+        border-radius: 2px;
+        color: white;
+        width: 5vw;
+    }
+
+    .nav-search {
+        margin-right: 6vw;
+    }
+
+    .cart-nav {
+        position: relative;
+        margin-right: 8vw;
+        font-size: 1.65rem;
+        color: white;
+        align-items: center;
+        margin-top: 1vh;
+    }
+
+    .cart-nav .cart {
+        font-size: 1.2rem;
+    }
+
+    .num {
+        border-radius: 100%;
+        background-color: white;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 2vh;
+        height: 2vh;
+        font-size: .65rem;
+        line-height: 2vh;
+        text-align: center;
+        color: #000;
+        right: 0%;
+        left: 50%;
+        bottom:60%;
+    }
+
+    .navmenu {
+        display: flex;
+        background-color: rgb(8,114,240);
+        justify-content: space-between;
+        border-top:0.5px solid rgb(8, 97, 205);
+    }
+
+    .navlinks,ul,li, a {
+        margin-left: 1.5vw;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .hero {
+        background-image: url(https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-hero-image.jpg);
+        padding: 18vh;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+
+    .cardbtn {
+        color: rgb(8,114,240);
+    }
+
+    .cardheading {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+
+    .cardtext {
+        
+        font-weight: 100;
+    }
+
+    .card .card-content {
+        /* width: 10vw;
+        line-height: 3vh; */
+        padding: 40px;
+    }
+    .flex-3 {
+        flex: 3;
+    }
+    .flex-6 {
+        flex: 6;
+    }
+
+    .products {
+        background-color: rgb(255, 255, 255);
+        margin-left:6vw;
+        margin-right: 6vw;
+        margin-top: 8vw;
+        height: 85vh;
+        padding: 8vw;
+        border: 1px solid rgb(224, 222, 222);
+    }
+
+
+    .prod-first {
+        display: flex;
+        position: relative;
+        
+    }
+
+
+    .product-two {
+        position: absolute;
+        left: 9%;
+        top: 115%;
+    }
+
+    .title {
+        text-align: center;
+        position: absolute;
+        top: 70%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        align-items: center;
+        
+    }
+
+    .title-air {
+        left: 7%;
+    }
+
+    .title-aud {
+        left: 34%;
+    }
+
+    .title-gad {
+        left: 57%;
+    }
+
+
+    .title-home {
+        left: 83%;
+    }
+
+    .text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.65rem;
+        font-weight: 600;
+        align-items: center;
+        color: gray;
+        position: absolute;
+        top: 78%;
+    }
+
+    
+    .t4 {
+        left: 9%;
+    }
+
+    .t7 {
+        left: 35%;
+    }
+
+    .t6 {
+        left: 59%;
+    }
+
+    .t5 {
+        left: 85%;
+    }
+
+    .offer {
+        margin: 8vw;
+    }
+
+    .offers {
+        margin: 6vw;
+        background-image: url(https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-promotional-banner-fwidth-1.jpg);
+        height: 15vh;
+    }
+
+    .headline {
+        background-image: url(https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-promotional-banner-2.jpg);
+        height: 19vh;
+    }
+
+    .headlines {
+        background-image: url(https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-promotional-banner-1.jpg);
+        height: 19vh;
+    }
+
+
+    .prod-title {
+        font-size: 2rem;
+        margin: 0%;
+        margin-bottom: 4vh;
+    }
+
+
+    .product {
+        background-color: rgb(255, 255, 255);
+        margin-left:6vw;
+        margin-right: 6vw;
+        margin-top: 8vw;
+        height: 70vh;
+        padding: 4vw;
+        border: 1px solid rgb(224, 222, 222);
+    }
+
+    .rating {
+        color: rgba(232, 211, 19, 0.927);
+    }
+
+    .cat-text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .review {
+        margin: 6vw;
+    }
+
+    .review-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 2vw;
+    }
+
+    .review-text {
+        font-family: 'Poppins', sans-serif;
+        color: rgb(146, 145, 145);
+        font-size: medium;
+        font-weight: 200;
+    }
+
+    .card {
+        padding: 2vw;
+        box-shadow: none;
+        background-color: aliceblue;
+    }
+
+    .customer {
+        display: flex;
+    }
+
+    .cust-img {
+        border-radius: 100%;
+        margin-top: 1vh;
+    }
+
+    .cust-name {
+        margin-left: 1vw;
+        margin-top: 1.5vw;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        color: rgb(38, 36, 36);
+    }
+
+    .logo {
+        margin-left: 8vw;
+        margin-bottom: 4vh;
+    }
+
+    .cont {
+        margin-right: 8vw;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        color: rgb(45, 45, 45);
+        border-top:0.5px solid rgb(58, 58, 59);
+    }
+
+    .logo {
+        margin-left: 8vw;
+        margin-bottom: 4vh;
+    }
+
+    .cont {
+        margin-right: 8vw;
+    }
+
+    .footer-logo {
+        margin-bottom: 4vh;
+        font-weight: 200;
+    }
+
+    .footer-socials {
+       font-size: 1.2rem;
+
+    }
+
+    .footer-link {
+        font-size: medium;
+        
+    }
+
+    
+    
+</style>
+<body>
+
+    <div class="topnav">
+        <h6 class="cust-service">24/7 Customer service 1-800-234-5678</h6>
+
+        <div class="ship-order">
+            <h6 class="ship"><a href="#">Shipping & return</a></h6>
+            <h6 class="ship"><a href="#">Track order</a></h6>
+        </div>
+    </div>
+
+
+    <div class="mainnav">
+        <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-logo.svg" alt="logos" class="logo">
+        <div class="nav-search">
+            <input type="search" placeholder="Search Products..." class="search-nav browser-default">
+            <button class="nav-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+
+    <div class="navmenu">
+        
+        <div class="navlinks">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blogs</a></li>
+            </ul>
+        </div>
+
+        <div class="cart-nav">
+            <i class="fa-solid fa-cart-shopping cart"></i>
+            <span class="num">0</span>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <div class="flex-6"></div>
+        <div class="flex-3">
+            <div class="card">  
+                <div class="card-content">
+                    <h4 class="cardheading">The best home entertainment system is here</h4>
+                    <h6 class="cardtext">Sit diam odio eget rhoncus volutpat est nibh velit posuere egestas.</h6>
+                    <h6 class="cardbtn">Shop now</h6>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <div class="products">
+        <!-- <h4 class="prod-title">
+            Today's best deals
+        </h4> -->
+
+        <div class="product-two">
+
+                <div class="prod-first">
+
+                        <div class="prod-img">
+                                <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-06.jpg" alt="ac">
+                                <h6 class="title title-air">AIR CONDITIONER</h6>
+                                <p class="text t4">4 PRODUCTS</p>
+                        </div>
+
+                        <div class="prod-img">
+                            <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-08.jpg" alt="ac">
+                            <h6 class="title title-aud">AUDIO & VIDEO</h6>
+                            <p class="text t7">7 PRODUCTS</p>
+                        </div>
+
+
+                        <div class="prod-img">
+                            <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-02.jpg" alt="ac">
+                            <h6 class="title title-gad">PHONES & GADGETS</h6>
+                            <p class="text t6">6 PRODUCTS</p>
+                        </div>
+
+
+                        <div class="prod-img">
+                            <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-07.jpg" alt="ac">
+                            <h6 class="title title-home">HOME APPLIANCES</h6>
+                            <p class="text t5">5 PRODUCTS</p>
+                        </div>
+                
+                </div>
+                
+                
+                <div class="prod-first">
+
+                    <div class="prod-img">
+                            <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-05.jpg" alt="ac">
+                            <h6 class="title title-air">KITCHEN APPLIANCES</h6>
+                            <p class="text t4">4 PRODUCTS</p>
+                    </div>
+
+                    <div class="prod-img">
+                        <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-03.jpg" alt="ac">
+                        <h6 class="title title-aud">PCS & LAPTOPS</h6>
+                        <p class="text t7">7 PRODUCTS</p>
+                    </div>
+
+
+                    <div class="prod-img">
+                        <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-04.jpg" alt="ac">
+                        <h6 class="title title-gad">REFRIGERATORS</h6>
+                        <p class="text t6">6 PRODUCTS</p>
+                    </div>
+
+
+                    <div class="prod-img">
+                        <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-category-image-01.jpg" alt="ac">
+                        <h6 class="title title-home">SMART HOUSES</h6>
+                        <p class="text t5">5 PRODUCTS</p>
+                    </div>
+            
+            </div>        
+        </div>    
+    </div>
+
+
+    <div class="offer">
+        <div class="row">
+            <div class="col s6">
+                <div class="headline">
+                    <!-- <h5 class="heading">The only case you need</h5>
+                    <p class="cta">Shop now</p> -->
+                </div>
+            </div>
+
+
+            <div class="col s6">
+                <div class="headlines">
+                    <!-- <h5 class="heading">Get 30% off</h5>
+                    <p class="cta">Shop now</p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="product">
+        <h4 class="prod-title">
+            Home Appliances
+        </h4>
+
+        <div class="product-twoo">
+
+            <div class="row">
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-40-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Max SR Home Theater Surround Sound Bar HDMI, Optical Cables, Wireless Subwoofer & Two Speakers
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-41.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Max SR Home Theater Surround Sound Bar HDMI, Optical Cables, Wireless Subwoofer & Two Speakers
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-39-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Max SR Home Theater Surround Sound Bar HDMI, Optical Cables, Wireless Subwoofer & Two Speakers
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-38-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Max SR Home Theater Surround Sound Bar HDMI, Optical Cables, Wireless Subwoofer & Two Speakers
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+            </div>
+
+
+            
+               
+            
+                    
+        </div>    
+    </div>
+
+
+    <div class="product">
+        <h4 class="prod-title">
+            Air Conditioner
+        </h4>
+
+        <div class="product-twoo">
+
+            <div class="row">
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-9.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Air Conditioner 5000 BTU, Efficient Cooling for Smaller Areas Like Bedrooms and Guest Rooms
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-10-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Air Conditioner 5000 BTU, Efficient Cooling for Smaller Areas Like Bedrooms and Guest Rooms
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-11-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Air Conditioner 5000 BTU, Efficient Cooling for Smaller Areas Like Bedrooms and Guest Rooms
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-16-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Air Conditioner 5000 BTU, Efficient Cooling for Smaller Areas Like Bedrooms and Guest Rooms
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+            </div>
+
+
+            
+               
+            
+                    
+        </div>    
+    </div>
+
+    <div class="product">
+        <h4 class="prod-title">
+            Refrigeration
+        </h4>
+
+        <div class="product-twoo">
+
+            <div class="row">
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-8-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Double Door Mini Fridge with Freezer for Office or Dorm with Adjustable Remove Glass Shelves
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-6-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Double Door Mini Fridge with Freezer for Office or Dorm with Adjustable Remove Glass Shelves
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-7-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Double Door Mini Fridge with Freezer for Office or Dorm with Adjustable Remove Glass Shelves
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+
+                <div class="col s3">
+                    <img class="responsive-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-product-image-5-600x600.jpg" alt="hme">
+                    <div class="rating">
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <h6 class="cat-text">
+                        Double Door Mini Fridge with Freezer for Office or Dorm with Adjustable Remove Glass Shelves
+                    </h6>
+
+                    <p class="price">$629.00</p>
+                </div>
+            </div>
+
+
+            
+               
+            
+                    
+        </div>    
+    </div>
+
+    <div class="offers">
+
+    </div>
+
+
+    <div class="review">
+
+        <h6 class="review-title">
+            What is everyone saying?
+
+        </h6>
+
+        <div class="row">
+            <div class="col s4">
+                <div class="card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <h6 class="review-text">
+                        Dolores porro laboriosam molestias est <br> quo. Et et eos. Ab error modi labore sed <br> eaque est. Quaerat aut est fugiat.
+                    </h6>
+
+                    <div class="customer">
+                        <img class="cust-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-reviewer-avatar-image-3.jpg" alt="img">
+                        <p class="cust-name">
+                            	Rafael Stokes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col s4">
+                <div class="card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <h6 class="review-text">
+                        Dolores porro laboriosam molestias est <br> quo. Et et eos. Ab error modi labore sed <br> eaque est. Quaerat aut est fugiat.
+                    </h6>
+
+                    <div class="customer">
+                        <img  class="cust-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-reviewer-avatar-image-3.jpg" alt="img">
+                        <p class="cust-name">
+                            	Rafael Stokes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <div class="card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <h6 class="review-text">
+                        Dolores porro laboriosam molestias est <br> quo. Et et eos. Ab error modi labore sed <br> eaque est. Quaerat aut est fugiat.
+                    </h6>
+
+                    <div class="customer">
+                        <img class="cust-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-reviewer-avatar-image-3.jpg" alt="img">
+                        <p class="cust-name">
+                            	Rafael Stokes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col s4">
+                <div class="card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <h6 class="review-text">
+                        Dolores porro laboriosam molestias est <br> quo. Et et eos. Ab error modi labore sed <br> eaque est. Quaerat aut est fugiat.
+                    </h6>
+
+                    <div class="customer">
+                        <img class="cust-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-reviewer-avatar-image-3.jpg" alt="img">
+                        <p class="cust-name">
+                            	Rafael Stokes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col s4">
+                <div class="card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <h6 class="review-text">
+                        Dolores porro laboriosam molestias est <br> quo. Et et eos. Ab error modi labore sed <br> eaque est. Quaerat aut est fugiat.
+                    </h6>
+
+                    <div class="customer">
+                        <img  class="cust-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-reviewer-avatar-image-3.jpg" alt="img">
+                        <p class="cust-name">
+                            	Rafael Stokes
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s4">
+                <div class="card">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <h6 class="review-text">
+                        Dolores porro laboriosam molestias est <br> quo. Et et eos. Ab error modi labore sed <br> eaque est. Quaerat aut est fugiat.
+                    </h6>
+
+                    <div class="customer">
+                        <img class="cust-img" src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-reviewer-avatar-image-3.jpg" alt="img">
+                        <p class="cust-name">
+                            	Rafael Stokes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="logo">
+            <img src="https://websitedemos.net/electronic-store-04/wp-content/uploads/sites/1055/2022/03/electronic-store-logo-mono.svg" alt="img">
+            <h6 class="footer-logo">Pulvinar aenean dignissim porttitor sed <br> risus urna, pretium quis non id.</h6>
+                <div class="footer-socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+        </div>
+
+        <div class="categories">
+            <h4 class="footer-link">Categories</h4>
+
+            <div class="lin-k">
+                <div class="linkks">About</div>
+                <div class="linkks">Cart</div>
+                <div class="Checkout">About</div>
+                <div class="linkks">Contact</div>
+                <div class="linkks">My Account</div>
+                <div class="linkks">Shop</div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h4 class="footer-link">Contact Us</h4>
+
+            <h6 class="cont">
+                123 Demo Blvd, Miami, FL 4567, United States <br>
+                +1 123-456-7890 <br>
+                mail@example.com
+            </h6>
+        </div>
+    </div>
+    
+</body>
+</html>
